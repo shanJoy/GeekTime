@@ -1,0 +1,28 @@
+PODS:
+  - Kingfisher (4.10.1)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - Kingfisher
+  - R.swift (~> 5.1.0)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - R.swift
+    - R.swift.Library
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 96eaeb24655183c6c5aa22f2f7abc3342491ef9b
+
+COCOAPODS: 1.9.3
