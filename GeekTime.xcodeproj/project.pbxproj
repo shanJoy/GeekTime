@@ -39,6 +39,7 @@
 		B1C0922424F2B7670096504D /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0922324F2B7670096504D /* FakeData.swift */; };
 		B1C0922724F2BBA70096504D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0922624F2BBA70096504D /* UIColorExtension.swift */; };
 		B1C0922924F2C07E0096504D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0922824F2C07E0096504D /* BaseViewController.swift */; };
+		B1C0922B24F2C3A90096504D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0922A24F2C3A90096504D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		B1C0922324F2B7670096504D /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
 		B1C0922624F2BBA70096504D /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B1C0922824F2C07E0096504D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B1C0922A24F2C3A90096504D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE9DD86B81EB484046FA171B /* Pods_GeekTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 				B1C091E924F2A7DC0096504D /* LaunchScreen.storyboard */,
 				B1C091EC24F2A7DC0096504D /* Info.plist */,
 				B1C0922824F2C07E0096504D /* BaseViewController.swift */,
+				B1C0922A24F2C3A90096504D /* LoginViewController.swift */,
 			);
 			path = GeekTime;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				B1C0922924F2C07E0096504D /* BaseViewController.swift in Sources */,
 				B1C091E124F2A7DB0096504D /* SceneDelegate.swift in Sources */,
 				B1C0921B24F2B4230096504D /* R.generated.swift in Sources */,
+				B1C0922B24F2C3A90096504D /* LoginViewController.swift in Sources */,
 				B1C0922424F2B7670096504D /* FakeData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
