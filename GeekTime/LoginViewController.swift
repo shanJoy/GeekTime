@@ -91,6 +91,7 @@ class LoginViewController: BaseViewController, ValidatesPhoneNumber, ValidatesPa
         loginButton.setTitle("登录", for: .normal)
         loginButton.setTitleColor( .white, for: .normal)
         loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 30)
+        //loginButton.backgroundColor = UIColor.hexColor(0xf8892e)
         loginButton.setBackgroundImage(UIColor.hexColor(0xf8892e).toImage(), for: .normal)
         loginButton.layer.cornerRadius = 5
         loginButton.layer.masksToBounds = true
