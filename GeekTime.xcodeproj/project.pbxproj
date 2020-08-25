@@ -46,6 +46,7 @@
 		B1C0923424F54EF30096504D /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0923324F54EF30096504D /* ProductList.swift */; };
 		B1C0923624F559980096504D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0923524F559980096504D /* DetailViewController.swift */; };
 		B1C0923824F55E570096504D /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0923724F55E570096504D /* Tab.swift */; };
+		B1C0923A24F578050096504D /* CommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0923924F578050096504D /* CommonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		B1C0923324F54EF30096504D /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		B1C0923524F559980096504D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B1C0923724F55E570096504D /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		B1C0923924F578050096504D /* CommonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCell.swift; sourceTree = "<group>"; };
 		CE9DD86B81EB484046FA171B /* Pods_GeekTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -207,6 +209,7 @@
 				B1C0923124F408090096504D /* BannerView.swift */,
 				B1C0923324F54EF30096504D /* ProductList.swift */,
 				B1C0923724F55E570096504D /* Tab.swift */,
+				B1C0923924F578050096504D /* CommonCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				B1C091DF24F2A7DB0096504D /* AppDelegate.swift in Sources */,
 				B1C0922024F2B5FE0096504D /* Product.swift in Sources */,
 				B1C0922724F2BBA70096504D /* UIColorExtension.swift in Sources */,
+				B1C0923A24F578050096504D /* CommonCell.swift in Sources */,
 				B1C0922224F2B6D90096504D /* Deal.swift in Sources */,
 				B1C0922924F2C07E0096504D /* BaseViewController.swift in Sources */,
 				B1C091E124F2A7DB0096504D /* SceneDelegate.swift in Sources */,
