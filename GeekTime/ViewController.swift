@@ -9,26 +9,29 @@
 import UIKit
 import SnapKit
 
-class ViewController: BaseViewController {
+class ViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let button = UIButton(type: .custom)
-        button.setTitle("click", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        button.addTarget(self, action: #selector(didClickBtn), for: .touchUpInside)
-        view.addSubview(button)
-        button.snp.makeConstraints { (m) in
-            m.left.top.equalTo(100)
-            m.width.equalTo(100)
-            m.height.equalTo(50)
-        }
-    }
-
-    @objc func didClickBtn() {
-        let loginVC = LoginViewController()
-        navigationController?.pushViewController(loginVC, animated: true)
+        let homeVC = HomeViewController()
+        homeVC.tabBarItem.image = R.image.home()
+        homeVC.tabBarItem.selectedImage = R.image.home_selected()?.withRenderingMode(.alwaysOriginal)
+        homeVC.tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.hexColor(0x333333)], for: .selected)
+        homeVC.tabBarItem.title = "首页"
+        let navgationHomeVC = UINavigationController(rootViewController: homeVC)
+        self.addChild(navgationHomeVC)
+        
+        let mineVC = MineViewController()
+        mineVC.tabBarItem.image = R.image.mine()
+        mineVC.tabBarItem.selectedImage = R.image.mine_selected()?.withRenderingMode(.alwaysOriginal)
+        mineVC.tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.hexColor(0x333333)], for: .selected)
+        mineVC.tabBarItem.title = "我的"
+        let navgationMineVC = UINavigationController(rootViewController: mineVC)
+        self.addChild(navgationMineVC)
+        
+        
+        
     }
     
 }
