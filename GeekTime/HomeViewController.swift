@@ -9,13 +9,14 @@
 import UIKit
 import Kingfisher
 
-class HomeViewController: BaseViewController, BannerViewDataSource, ProductListDelegate {
-    
-    func didSelectProduct(product: Product) {
-        let detailVC = DetailViewController()
-        detailVC.product = product
-        detailVC.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(detailVC, animated: true)
+class HomeViewController: BaseViewController, BannerViewDataSource, CommonListDelegate {
+    func didSelectItem<Item>(_ item: Item) {
+        if let product = item as? Product {
+            let detailVC = DetailViewController()
+            detailVC.product = product
+            detailVC.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,7 +41,7 @@ class HomeViewController: BaseViewController, BannerViewDataSource, ProductListD
         }
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +52,7 @@ class HomeViewController: BaseViewController, BannerViewDataSource, ProductListD
         bannerView.dataSource = self
         view.addSubview(bannerView)
         
-        let productList = ProductList()
+        let productList = CommonList<Product, ProductCell>(frame: .zero)
         productList.items = FakeData.createProducts()
         productList.delegate = self
         view.addSubview(productList)
@@ -60,5 +61,5 @@ class HomeViewController: BaseViewController, BannerViewDataSource, ProductListD
             make.top.equalTo(bannerView.snp_bottom).offset(5)
         }
     }
-
+    
 }

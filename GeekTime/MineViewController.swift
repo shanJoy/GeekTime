@@ -61,9 +61,9 @@ class MineViewController: BaseViewController {
     }
     
     @objc func didClickPurchasedCell() {
-//        let dealVC = DealListViewController()
-//        dealVC.hidesBottomBarWhenPushed = true
-//        navigationController?.pushViewController(dealVC, animated: true)
+        let dealVC = DealListViewController()
+        dealVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(dealVC, animated: true)
     }
     
     private func createFirstGroupCells() {

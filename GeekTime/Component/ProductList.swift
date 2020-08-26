@@ -10,16 +10,12 @@ import Foundation
 import UIKit
 import SnapKit
 
-protocol ProductListDelegate: AnyObject {
-    func didSelectProduct(product: Product)
-}
-
-class ProductCell: UITableViewCell {
+class ProductCell: CommonListCell<Product> {
     
     let priceLabel: UILabel
     let productImageView: UIImageView
     
-    var item: Product? {
+    override var item: Product? {
         didSet {
             if let p = self.item {
                 self.productImageView.kf.setImage(with: URL(string: p.imageUrl))
@@ -30,7 +26,7 @@ class ProductCell: UITableViewCell {
         }
     }
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    required init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         priceLabel = UILabel(frame: .zero)
         productImageView = UIImageView()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -79,56 +75,67 @@ class ProductCell: UITableViewCell {
     }
 }
 
-class ProductList: UIView, UITableViewDataSource, UITableViewDelegate {
-    
-    var tableView: UITableView
-    var items: [Product]! = [] {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
-    
-    weak var delegate: ProductListDelegate?
-    
-    override init(frame: CGRect) {
-        tableView = UITableView(frame: .zero, style: .plain)
-        super.init(frame: frame)
-        self.setupViews()
-    }
-    
-    func setupViews() {
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.tableFooterView = UIView()
-        self.addSubview(tableView)
-        tableView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return items.count
-     }
-     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         var cell = tableView.dequeueReusableCell(withIdentifier: "cellId") as? ProductCell
-         if cell == nil {
-            cell = ProductCell(style: .subtitle, reuseIdentifier: "cellId")
-         }
-         cell?.item = items[indexPath.row]
-         return cell!
-     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didSelectProduct(product: items[indexPath.row])
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
+
+/*
+ 使用 CommonList中的 delegate， 这个也不需要了
+ */
+//protocol ProductListDelegate: AnyObject {
+//    func didSelectProduct(product: Product)
+//}
+
+/*
+ 使用了 CommonList 替换 ProductList
+ */
+//class ProductList: UIView, UITableViewDataSource, UITableViewDelegate {
+//
+//    var tableView: UITableView
+//    var items: [Product]! = [] {
+//        didSet {
+//            self.tableView.reloadData()
+//        }
+//    }
+//
+//    weak var delegate: ProductListDelegate?
+//
+//    override init(frame: CGRect) {
+//        tableView = UITableView(frame: .zero, style: .plain)
+//        super.init(frame: frame)
+//        self.setupViews()
+//    }
+//
+//    func setupViews() {
+//        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.tableFooterView = UIView()
+//        self.addSubview(tableView)
+//        tableView.snp.makeConstraints { (make) in
+//            make.edges.equalToSuperview()
+//        }
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//         return items.count
+//     }
+//
+//     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//         var cell = tableView.dequeueReusableCell(withIdentifier: "cellId") as? ProductCell
+//         if cell == nil {
+//            cell = ProductCell(style: .subtitle, reuseIdentifier: "cellId")
+//         }
+//         cell?.item = items[indexPath.row]
+//         return cell!
+//     }
+//
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 120
+//    }
+//
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        delegate?.didSelectProduct(product: items[indexPath.row])
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
+//}

@@ -47,6 +47,9 @@
 		B1C0923624F559980096504D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0923524F559980096504D /* DetailViewController.swift */; };
 		B1C0923824F55E570096504D /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0923724F55E570096504D /* Tab.swift */; };
 		B1C0923A24F578050096504D /* CommonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0923924F578050096504D /* CommonCell.swift */; };
+		B1C0923C24F5F9730096504D /* DealListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0923B24F5F9730096504D /* DealListViewController.swift */; };
+		B1C0923E24F5F9D70096504D /* CommonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0923D24F5F9D70096504D /* CommonList.swift */; };
+		B1C0924024F608330096504D /* DealListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0923F24F608330096504D /* DealListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +96,9 @@
 		B1C0923524F559980096504D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B1C0923724F55E570096504D /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		B1C0923924F578050096504D /* CommonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCell.swift; sourceTree = "<group>"; };
+		B1C0923B24F5F9730096504D /* DealListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListViewController.swift; sourceTree = "<group>"; };
+		B1C0923D24F5F9D70096504D /* CommonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonList.swift; sourceTree = "<group>"; };
+		B1C0923F24F608330096504D /* DealListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListCell.swift; sourceTree = "<group>"; };
 		CE9DD86B81EB484046FA171B /* Pods_GeekTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -155,6 +161,7 @@
 				B1C0922C24F396D00096504D /* HomeViewController.swift */,
 				B1C0922E24F3971E0096504D /* MineViewController.swift */,
 				B1C0923524F559980096504D /* DetailViewController.swift */,
+				B1C0923B24F5F9730096504D /* DealListViewController.swift */,
 			);
 			path = GeekTime;
 			sourceTree = "<group>";
@@ -210,6 +217,8 @@
 				B1C0923324F54EF30096504D /* ProductList.swift */,
 				B1C0923724F55E570096504D /* Tab.swift */,
 				B1C0923924F578050096504D /* CommonCell.swift */,
+				B1C0923D24F5F9D70096504D /* CommonList.swift */,
+				B1C0923F24F608330096504D /* DealListCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -378,6 +387,7 @@
 			files = (
 				B1C091E324F2A7DB0096504D /* ViewController.swift in Sources */,
 				B1C091DF24F2A7DB0096504D /* AppDelegate.swift in Sources */,
+				B1C0923C24F5F9730096504D /* DealListViewController.swift in Sources */,
 				B1C0922024F2B5FE0096504D /* Product.swift in Sources */,
 				B1C0922724F2BBA70096504D /* UIColorExtension.swift in Sources */,
 				B1C0923A24F578050096504D /* CommonCell.swift in Sources */,
@@ -386,12 +396,14 @@
 				B1C091E124F2A7DB0096504D /* SceneDelegate.swift in Sources */,
 				B1C0922D24F396D00096504D /* HomeViewController.swift in Sources */,
 				B1C0921B24F2B4230096504D /* R.generated.swift in Sources */,
+				B1C0924024F608330096504D /* DealListCell.swift in Sources */,
 				B1C0922B24F2C3A90096504D /* LoginViewController.swift in Sources */,
 				B1C0922424F2B7670096504D /* FakeData.swift in Sources */,
 				B1C0923824F55E570096504D /* Tab.swift in Sources */,
 				B1C0923424F54EF30096504D /* ProductList.swift in Sources */,
 				B1C0923624F559980096504D /* DetailViewController.swift in Sources */,
 				B1C0923224F408090096504D /* BannerView.swift in Sources */,
+				B1C0923E24F5F9D70096504D /* CommonList.swift in Sources */,
 				B1C0922F24F3971E0096504D /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

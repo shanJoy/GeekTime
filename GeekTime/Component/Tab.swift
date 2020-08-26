@@ -92,14 +92,14 @@ class Tab: UIView {
         selectedItemButton.isSelected = false
         sender.isSelected = true
         selectedItemButton = sender
-//        UIView.animate(withDuration: 3) {
-//            self.indicatorView.snp.remakeConstraints { (make) in
-//                make.centerX.equalTo(self.selectedItemButton)
-//                make.bottom.equalToSuperview()
-//                make.width.equalTo(80)
-//                make.height.equalTo(4)
-//            }
-//        }
+        //        UIView.animate(withDuration: 3) {
+        //            self.indicatorView.snp.remakeConstraints { (make) in
+        //                make.centerX.equalTo(self.selectedItemButton)
+        //                make.bottom.equalToSuperview()
+        //                make.width.equalTo(80)
+        //                make.height.equalTo(4)
+        //            }
+        //        }
         self.indicatorView.snp.remakeConstraints { (make) in
             make.centerX.equalTo(self.selectedItemButton)
             make.bottom.equalToSuperview()
